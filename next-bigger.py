@@ -23,11 +23,8 @@ def next_bigger(number):
         for i in range(index + 1, len(digits)):
             if digit > digits[i]:
                 digits[index], digits[i] = digits[i], digits[index]
+                digits[0:i] = reversed(digits[0:i])
                 return cat_digits(digits)
-            elif digit < digits[i]:
-                digits[index], digits[i] = digits[i], digits[index]
-                break
-            else:
-                break
+    return -1
 
 print next_bigger(int(sys.argv[1]))
