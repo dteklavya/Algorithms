@@ -70,10 +70,8 @@ def productFib(prod):
                     if nextfib * n > prod:
                         return [nextfib, n, False]
             else:
-                print "Skipping: ", i
                 continue
         else:
-            print "Skipping: ", i
             continue
 
 
